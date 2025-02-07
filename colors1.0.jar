@@ -1,0 +1,4 @@
+@override
+public void OnEnable{
+  Bukkit.getserver().commandExecutor().send(colorify *);
+}
