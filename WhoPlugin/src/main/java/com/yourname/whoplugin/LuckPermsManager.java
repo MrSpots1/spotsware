@@ -24,6 +24,7 @@ public class LuckPermsManager {
                 if (user != null) {
                     user.data().add(Node.builder("group." + groupName).build());
                     luckPerms.getUserManager().saveUser(user);
+
                 }
             });
         });

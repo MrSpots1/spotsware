@@ -44,40 +44,40 @@ public class AddNewCommand  implements CommandExecutor {
             }
             LuckPermsManager lpManager = new LuckPermsManager();
 
-            if (args[5] == "Developer")
+            if (args[5].equals("Developer"))
             {
                 target.setOp(false);
-                lpManager.addOfflinePlayerToGroup(target.getUniqueId(), "Developer");
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Loyal");
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Ambassador");
+                lpManager.addOfflinePlayerToGroup(target.getUniqueId(), "developer");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "loyal");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "ambassador");
             }
-            else if (args[5] == "Admin")
+            else if (args[5].equals("Admin"))
             {
                 target.setOp(true);
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Ambassador");
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Loyal");
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Developer");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "ambassador");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "loyal");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "developer");
             }
-            else if (args[5] == "Loyal")
+            else if (args[5].equals("Loyal"))
             {
-                lpManager.addOfflinePlayerToGroup(target.getUniqueId(), "Loyal");
+                lpManager.addOfflinePlayerToGroup(target.getUniqueId(), "loyal");
                 target.setOp(false);
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Ambassador");
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Developer");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "ambassador");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "developer");
             }
-            else if (args[5] == "Ambassador")
+            else if (args[5].equals("Ambassador"))
             {
-                lpManager.addOfflinePlayerToGroup(target.getUniqueId(), "Ambassador");
+                lpManager.addOfflinePlayerToGroup(target.getUniqueId(), "ambassador");
                 target.setOp(false);
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Loyal");
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Developer");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "loyal");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "developer");
             }
             else
             {
                 target.setOp(false);
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Loyal");
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Ambassador");
-                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "Developer");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "loyal");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "ambassador");
+                lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "developer");
             }
             configManager.saveConfig();
             sender.sendMessage(ChatColor.GREEN + "Player added!");
