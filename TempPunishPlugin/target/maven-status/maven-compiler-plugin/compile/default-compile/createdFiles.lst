@@ -1,0 +1,8 @@
+com\yourname\temppunishplugin\MuteCommand.class
+com\yourname\temppunishplugin\TempIPBanCommand.class
+com\yourname\temppunishplugin\TempBanCommand.class
+com\yourname\temppunishplugin\TempMuteCommand.class
+com\yourname\temppunishplugin\MuteListener.class
+com\yourname\temppunishplugin\UnmuteCommand.class
+com\yourname\temppunishplugin\MuteManager.class
+com\yourname\temppunishplugin\TempPunishPlugin.class

@@ -1,0 +1,31 @@
+name: TempPunishPlugin
+version: 1.0
+main: com.yourname.temppunishplugin.TempPunishPlugin
+api-version: 1.21
+description: A plugin to mute and temp mute players, and manage temporary bans.
+author: MrSpots
+commands:
+  mute:
+    description: Mute a player
+    usage: /mute <player>
+    permission: temppunishplugin.givepunishments
+  unmute:
+    description: Unmute a player
+    usage: /unmute <player>
+    permission: temppunishplugin.givepunishments
+  tempban:
+    description: Temporarily ban a player
+    usage: /tempban <player> <time> [reason]
+    permission: temppunishplugin.givepunishments
+  tempip-ban:
+    description: Temporarily ban a player by IP
+    usage: /tempip-ban <player> <time> [reason]
+    permission: temppunishplugin.givepunishments
+  tempmute:
+    description: Temporarily mute a player
+    usage: /tempmute <player> <time> [reason]
+    permission: temppunishplugin.givepunishments
+permissions:
+  temppunishplugin.givepunishments:
+    description: Allow admins to punish people
+    default: op
