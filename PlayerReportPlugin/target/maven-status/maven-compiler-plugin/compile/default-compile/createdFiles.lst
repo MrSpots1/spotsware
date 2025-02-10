@@ -1,0 +1,6 @@
+com\yourname\playerreportplugin\ViewReportsCommand.class
+com\yourname\playerreportplugin\PlayerReportPlugin.class
+com\yourname\playerreportplugin\CloseReportCommand.class
+com\yourname\playerreportplugin\ReportCommand.class
+com\yourname\playerreportplugin\Report.class
+com\yourname\playerreportplugin\ReportManager.class

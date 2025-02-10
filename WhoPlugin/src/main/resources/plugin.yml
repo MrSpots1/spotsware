@@ -1,0 +1,37 @@
+name: ProfilePlugin
+version: 1.0
+main: com.yourname.whoplugin.WhoPlugin
+api-version: 1.21
+description: A plugin to manage user profile
+author: MrSpots
+commands:
+  profile:
+    description: get user profile
+    usage: /profile <player>
+  playermodify:
+    description: modify user profile
+    usage: /playermodify <player> <element> <new-data>
+    permission: whoplugin.manageprofiles
+  addnew:
+    description: add user profile and whitelist them
+    usage: /addnew <player> <school> <grade> <name> <pronouns> <role>
+    permission: whoplugin.manageprofiles
+  set-pronouns:
+    description: add user profile and whitelist them
+    usage: /set-pronouns <data>
+    permission: whoplugin.changepronouns
+  check-ip:
+    description: check if any other players have same IP
+    usage: /profile <player>
+    permission: whoplugin.manageprofiles
+
+      # No permissions required (handled by UUID check in code).
+
+
+permissions:
+  whoplugin.manageprofiles:
+    description:  Allow admins to manage profiles
+    default: op
+  whoplugin.changepronouns:
+    description: Allow changing of own pronouns
+    default: true

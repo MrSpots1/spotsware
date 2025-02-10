@@ -1,0 +1,22 @@
+name: PlayerReportPlugin
+version: 1.0
+main: com.yourname.playerreportplugin.PlayerReportPlugin
+api-version: 1.21
+description: A plugin for player reports.
+author: MrSpots
+commands:
+  report:
+    description: Report another player
+    usage: /<command> <player> <reason>
+  viewreports:
+    description: View open reports
+    usage: /<command>
+    permission: playerreportplugin.managereports
+  closereports:
+    description: Close a report
+    usage: /<command> <reportID>
+    permission: playerreportplugin.managereports
+permissions:
+  playerreportplugin.managereports:
+    description: Allow admins to view/close reports
+    default: op
