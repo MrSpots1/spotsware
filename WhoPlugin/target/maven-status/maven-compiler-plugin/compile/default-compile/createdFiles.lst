@@ -1,9 +1,11 @@
+com\yourname\whoplugin\CheckIPCommand.class
+com\yourname\whoplugin\PayCommand.class
+com\yourname\whoplugin\TeamSpawnCommand.class
+com\yourname\whoplugin\WhoCommand.class
 com\yourname\whoplugin\WhoPlugin.class
 com\yourname\whoplugin\DataManager.class
 com\yourname\whoplugin\AddNewCommand.class
 com\yourname\whoplugin\PlayerModifyCommand.class
 com\yourname\whoplugin\SetPronounsCommand.class
 com\yourname\whoplugin\LuckPermsManager.class
-com\yourname\whoplugin\CheckIPCommand.class
 com\yourname\whoplugin\CheckIPCommand$1.class
-com\yourname\whoplugin\WhoCommand.class

@@ -130,7 +130,7 @@ public class WhoPlugin extends JavaPlugin implements Listener {
             try {
                 ChatColor style = ChatColor.valueOf(styleName);
                 if (!style.isFormat() || style.equals(ChatColor.MAGIC)) {
-                    player.sendMessage(ChatColor.RED + "Invalid style! Use normal, italic, bold, or italic_bold.");
+                    player.sendMessage(ChatColor.RED + "Invalid style! Use reset, italic, bold, or italic_bold.");
                     return true;
                 }
 
@@ -142,6 +142,7 @@ public class WhoPlugin extends JavaPlugin implements Listener {
                 configManager.saveConfig();
             } catch (IllegalArgumentException e) {
                 player.sendMessage(ChatColor.RED + "Invalid style! Use reset, italic, bold, underline, or strikethrough.");
+                return true;
             }
         } else if (command.getName().equalsIgnoreCase("teamspawn"))
         {
@@ -167,9 +168,9 @@ public class WhoPlugin extends JavaPlugin implements Listener {
             }
             Location location = new Location(world, x, y, z);
             teamSpawnPoints.put(teamName, location);
+            sender.sendMessage(ChatColor.GREEN + "Team Spawn Updated!");
 
         }
-        sender.sendMessage(ChatColor.GREEN + "Team Spawn Updated!");
         return true;
     }
     public void setTeamSpawnPoint(String team, Location location) {
