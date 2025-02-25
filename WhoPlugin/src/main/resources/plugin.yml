@@ -24,6 +24,20 @@ commands:
     description: check if any other players have same IP
     usage: /profile <player>
     permission: whoplugin.manageprofiles
+  namecolor:
+    usage: /namecolor <color>
+    permission: whoplugin.customize
+  namestyle:
+    usage: /namestyle <style>
+    permission: whoplugin.customize
+  pay:
+    usage: /pay <player> <amount>
+    permission: whoplugin.pay
+  teamspawn:
+    description: Set spawn for a team
+    usage: /teamspawn <teamname> <x> <y> <z> <world>
+    permission: whoplugin.manageteams
+
 
       # No permissions required (handled by UUID check in code).
 
@@ -32,6 +46,15 @@ permissions:
   whoplugin.manageprofiles:
     description:  Allow admins to manage profiles
     default: op
+  whoplugin.manageteams:
+    description: Allow admins to manage team spawns
+    default: op
   whoplugin.changepronouns:
     description: Allow changing of own pronouns
     default: true
+  whoplugin.customize:
+    description: Allow changing of own pronouns
+    default: false
+  whoplugin.pay:
+    description: Allow players to pay other players with a command
+    default: false

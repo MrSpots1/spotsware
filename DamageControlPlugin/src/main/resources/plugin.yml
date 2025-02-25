@@ -1,0 +1,18 @@
+name: DamageControlPlugin
+version: 1.0
+main: com.yourname.damagecontrolplugin.DamageControlPlugin
+api-version: 1.21
+description: A plugin to manage damage
+author: MrSpots
+commands:
+  toggledamage:
+    description: toggle damgae
+    usage: /toggledamage <type> <true or false>
+    permission: damagecontrolplugin.managedamage
+
+
+
+permissions:
+  damagecontrolplugin.managedamage:
+    description:  Allow admins to manage damage
+    default: op

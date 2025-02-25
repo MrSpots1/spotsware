@@ -45,9 +45,11 @@ public class PlayerModifyCommand  implements CommandExecutor {
             } else if (args[1].equals("pronouns")) {
                 path = targetuu + ".pronouns";
             } else if (args[1].equals("role")) {
+
                 path = targetuu + ".role";
                 LuckPermsManager lpManager = new LuckPermsManager();
-                
+
+
                 if (args[2].equals( "Developer"))
                 {
 
@@ -58,11 +60,16 @@ public class PlayerModifyCommand  implements CommandExecutor {
                 }
                 else if (args[2].equals("Admin") )
                 {
-
-                    target.setOp(true);
-                    lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "ambassador");
-                    lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "loyal");
-                    lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "developer");
+                    if (sender instanceof ConsoleCommandSender) {
+                        target.setOp(true);
+                        lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "ambassador");
+                        lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "loyal");
+                        lpManager.removeOfflinePlayerFromGroup(target.getUniqueId(), "developer");
+                    }
+                    else {
+                        sender.sendMessage(ChatColor.RED + "You are not authorized to change users to this level");
+                        return true;
+                    }
                 }
                 else if (args[2].equals("Loyal"))
                 {
@@ -93,8 +100,14 @@ public class PlayerModifyCommand  implements CommandExecutor {
                 return true;
             }
             String data = "";
-            for (int i = 0; i < args.length - 2; i++) {
-                data = data + args[i+2] + " ";
+            if (args.length > 3) {
+                for (int i = 0; i < args.length - 2; i++) {
+                    data = data + args[i + 2] + " ";
+                }
+            }
+            else
+            {
+                data = args[2];
             }
             configManager.getConfig().set(path, data);
             configManager.saveConfig();

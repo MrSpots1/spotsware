@@ -8,6 +8,7 @@ commands:
   report:
     description: Report another player
     usage: /<command> <player> <reason>
+    permission: playerreportplugin.sendreports
   viewreports:
     description: View open reports
     usage: /<command>
@@ -20,3 +21,6 @@ permissions:
   playerreportplugin.managereports:
     description: Allow admins to view/close reports
     default: op
+  playerreportplugin.sendreports:
+    description: Allow players to send reports.
+    default: true
